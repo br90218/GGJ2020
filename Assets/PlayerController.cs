@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
 
     public Transform LeftFoot;
     public Transform RightFoot;
+    public Squash Squasher;
 
     protected float LastGroundContactRight;
     protected float LastGroundContactLeft;
@@ -61,6 +62,7 @@ public class PlayerController : MonoBehaviour {
             Velocity.y += JumpSpeed;
             groundContact = false;
             LastJumpTime = Time.time;
+            Squasher.PlayStretch();
         }
 
         if (Velocity.y > 0f && !Input.GetKey(KeyCode.Space)) {
@@ -75,6 +77,9 @@ public class PlayerController : MonoBehaviour {
                 float maxDrop = dropRCH.distance - 0.23f;
                 if (Velocity.y < maxDrop && Mathf.Abs(Velocity.y) > Mathf.Abs(maxDrop)) {
                     transform.position += Vector3.down * maxDrop;
+                    if (Mathf.Abs(Velocity.y) > Mathf.Abs(JumpSpeed) / 2f) {
+                        Squasher.PlaySquash();
+                    }
                     Velocity.y = 0f;
                 }
             }
