@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
     public float JumpGraceTime = 0.02f;
     public float Gravity;
     public float AirSteerRatio = 0.5f;
-    public ParticleSystem particleSystem;
+    public ParticleSystem dustParticle;
 
     public Transform LeftFoot;
     public Transform RightFoot;
@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour {
                     transform.position += Vector3.down * maxDrop;
                     if (Mathf.Abs(Velocity.y) > Mathf.Abs(JumpSpeed) / 2f) {
                         Squasher.PlaySquash();
-                        particleSystem.Play();
+                        dustParticle.Play();
                     }
                     Velocity.y = 0f;
                 }
