@@ -4852,7 +4852,7 @@ MonoBehaviour:
   JumpGraceTime: 0.02
   Gravity: 0.5
   AirSteerRatio: 0.5
-  particleSystem: {fileID: 199493577}
+  dustParticle: {fileID: 199493577}
   LeftFoot: {fileID: 5412913408075809251}
   RightFoot: {fileID: 5412913407117935777}
   Squasher: {fileID: 5412913407988999606}
