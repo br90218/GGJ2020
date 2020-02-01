@@ -44,12 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf4df201b3604b7e9d4d653941c785b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectScreen: SelectScreen
-  BattleScreen: Client
-  GameLauncher: RPSLauncher
+  StartScreen: StartMenu
+  Level1: JumpScene
   FadeSpeed: 1
-  FadeOutUIImage: {fileID: 0}
-  OverlayTextObj: {fileID: 0}
+  FadeOutUIImage: {fileID: 6599904485600593030}
+  OverlayTextObj: {fileID: 6599904485085761482}
 --- !u!1001 &7596283466238182277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -195,3 +194,27 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7596283466238182277}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6599904485600593030 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3674085972178880259, guid: 13a2979c4a7c74a7fbfa0f11d2e0c1e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 7596283466238182277}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6599904485085761482 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3674085971194252367, guid: 13a2979c4a7c74a7fbfa0f11d2e0c1e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 7596283466238182277}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

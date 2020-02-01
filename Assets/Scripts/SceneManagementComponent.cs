@@ -12,9 +12,8 @@ public class SceneManagementComponent : GenericPubSubComponent
 
     public static SceneManagementComponent instance;
 
-    public string SelectScreen = "";
-    public string BattleScreen = "";
-    public string GameLauncher = "";
+    public string StartScreen = "";
+    public string Level1 = "";
 
     public float FadeSpeed = 1f;
 
@@ -50,16 +49,14 @@ public class SceneManagementComponent : GenericPubSubComponent
             DontDestroyOnLoad(gameObject);
         }
 
-        //PubSubServerInstance.Subscribe(typeof(SignOutMessage), OnSignOut);
+        PubSubServerInstance.Subscribe(typeof(StartGameMessage), OnStartGame);
 
         Debug.Log("IN AWAKE OF SCENE MANAGER");
-        // Scene load blocking
-        SceneManager.LoadScene("");
     }
 
     private void OnDestroy()
     {
-        //PubSubServerInstance.Unsubscribe(typeof(SignOutMessage), OnSignOut);
+        PubSubServerInstance.Unsubscribe(typeof(StartGameMessage), OnStartGame);
     }
 
     #endregion
@@ -167,17 +164,14 @@ public class SceneManagementComponent : GenericPubSubComponent
 
     #region PubSub functions
 
-    /*
-     * Leaving this here for reference
-    private void OnSignOut(BaseMessage m)
+    private void OnStartGame(BaseMessage m)
     {
         if (loadSceneCoroutine == null)
         {
-            IEnumerator coroutine = FadeAndLoadScene(GameLauncher, string.Empty, false);
+            IEnumerator coroutine = FadeAndLoadScene(Level1, string.Empty, false);
             loadSceneCoroutine = StartCoroutine(coroutine);
         }
     }
-    */
 
     #endregion
 }
