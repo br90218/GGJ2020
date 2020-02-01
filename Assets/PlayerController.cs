@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour {
     protected float LastGroundContactRight;
     protected float LastGroundContactLeft;
     protected float LastJumpTime;
-    protected Vector3 Velocity;
+    public Vector3 Velocity;
     protected bool groundContact;
 
     public void Update() {

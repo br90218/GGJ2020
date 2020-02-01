@@ -9,6 +9,7 @@ public class RopeRenderer : MonoBehaviour
     public LayerMask hitLayer;
     public float lineThickness = 0.2f;
     public float uvWorldSpaceScale = 100f;
+    public float tensionScale = 1;
     private Mesh mesh;
     private List<Vector3> lines = new List<Vector3>();
     private void Awake()
@@ -41,13 +42,13 @@ public class RopeRenderer : MonoBehaviour
 
     public void RepaintRope()
     {
-        RopeRender.DrawRope(lines,lineThickness,uvWorldSpaceScale,Color.cyan, mesh);
+        RopeRender.DrawRope(lines,lineThickness,uvWorldSpaceScale * tensionScale,Color.cyan, mesh);
     }
 
     public void ClearRope()
     {
         lines.Clear();
-        RopeRender.DrawRope(lines,lineThickness,uvWorldSpaceScale,Color.cyan, mesh);
+        RopeRender.DrawRope(lines,lineThickness,uvWorldSpaceScale * tensionScale,Color.cyan, mesh);
     }
     
 }

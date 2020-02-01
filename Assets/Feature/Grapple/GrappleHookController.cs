@@ -11,7 +11,8 @@ public class GrappleHookController : MonoBehaviour
     public LayerMask obstacleLayer;
     public AnimationCurve grappleLaunchCurve;
     [Header("OtherController")] 
-    private SwingStrafeController swingStrafeController;
+    public SwingStrafeController swingStrafeController;
+    public PlayerController playerController;
     public RopeRenderer ropeRenderer;
     private LayerMask floorLayer;
     private bool onGrapple;
@@ -53,7 +54,8 @@ public class GrappleHookController : MonoBehaviour
             ropeRenderer.RepaintRope();
             enabled = false;
             onGrapple = false;
-            swingStrafeController.StartSwing();
+            swingStrafeController.StartSwing(hit.collider.transform.parent.position);
+            playerController.enabled = false;
 //            ropeRenderer.ClearRope();
 //            onGrapple = false;
         }

@@ -17,6 +17,7 @@
         </e>
         <e p="PlayerController.cs" t="Include" />
         <e p="SpringLine.cs" t="Include" />
+        <e p="Squash.cs" t="Include" />
       </e>
       <e p="GGJ2020.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
