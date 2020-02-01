@@ -30,6 +30,16 @@ public class PlayerController : MonoBehaviour {
         transform.position += Velocity / 2f;
     }
 
+
+
+    //public void FixedUpdate()
+    //{
+    //    GetComponent<Rigidbody2D>().position += new Vector2(Velocity.x, Velocity.y) / 2f;
+    //    Jump();
+    //    HorizontalMovement();
+    //    GetComponent<Rigidbody2D>().position += new Vector2(Velocity.x, Velocity.y) / 2f;
+    //}
+
     protected void Jump() {
         var leftRCH = Physics2D.Raycast(LeftFoot.position, Vector3.down, 0.15f);
         var rightRCH = Physics2D.Raycast(RightFoot.position, Vector3.down, 0.15f);

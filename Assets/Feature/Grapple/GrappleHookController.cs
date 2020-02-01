@@ -19,7 +19,13 @@ public class GrappleHookController : MonoBehaviour
     private Vector3 grapplePoint;
     private float grappleLaunchTime;
     private float grappleLaunchTotalTime;
+    private RopeBehaviour ropeBehaviour;
 
+
+    private void Awake()
+    {
+        ropeBehaviour = GetComponent<RopeBehaviour>();
+    }
 
     private void Update()
     {
@@ -45,21 +51,30 @@ public class GrappleHookController : MonoBehaviour
             return;
         }
         var distance = grappleLaunchCurve.Evaluate(grappleLaunchTime);
-        
-        RaycastHit hit;
-        if (Physics.Raycast(handPos,dir,out hit,distance,hingeLayer))
+
+        RaycastHit2D hit;
+        if (hit = Physics2D.Raycast(handPos, dir, distance, hingeLayer))
         {
             ropeRenderer.MovePoint(0,handPos);
-            ropeRenderer.MovePoint(1,hit.collider.transform.parent.position);
+            //ropeRenderer.MovePoint(1,hit.collider.transform.parent.position);
+            ropeRenderer.MovePoint(1, hit.collider.transform.position);
             ropeRenderer.RepaintRope();
             enabled = false;
             onGrapple = false;
-            swingStrafeController.StartSwing(hit.collider.transform.parent.position);
-            playerController.enabled = false;
-//            ropeRenderer.ClearRope();
-//            onGrapple = false;
+            swingStrafeController.StartSwing(hit.collider.transform.position);
+
+            //playerController.enabled = false;
+            //            ropeRenderer.ClearRope();
+            //            onGrapple = false;
+
+            ropeBehaviour.TargetTransform = hit.collider.transform;
+
+            ropeBehaviour.enabled = true;
+            
+
+
         }
-        else if (Physics.Raycast(handPos,dir,out hit,distance,obstacleLayer))
+        else if (hit = Physics2D.Raycast(handPos,dir, distance,obstacleLayer))
         {
             //Hit a obstacle
             ropeRenderer.ClearRope();

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(LineRenderer))]
 [RequireComponent(typeof(SpringJoint2D))]
 [RequireComponent(typeof(FixedJoint2D))]
 public class RopeBehaviour : MonoBehaviour
@@ -28,22 +27,26 @@ public class RopeBehaviour : MonoBehaviour
 
 
         OriginTransform = transform;
-        _line = GetComponent<LineRenderer>();
-        _line.SetPosition(0, OriginTransform.position);
-        _line.SetPosition(1, TargetTransform.position);
+        //_line = GetComponent<LineRenderer>();
+        //_line.SetPosition(0, OriginTransform.position);
+        //_line.SetPosition(1, TargetTransform.position);
         _springJoint = GetComponent<SpringJoint2D>();
+        _springJoint.enabled = true;
         _springJoint.connectedBody = TargetTransform.GetComponent<Rigidbody2D>();
 
+        _fixedJoint = GetComponent<FixedJoint2D>();
+        _fixedJoint.enabled = true;
         if (transform.parent)
         {
             _fixedJoint.connectedBody = transform.parent.GetComponent<Rigidbody2D>();
         }
+
     }
 
 
     public void Update()
     {
-        UpdateLineGraphics();
+        //UpdateLineGraphics();
     }
 
     public void FixedUpdate()
@@ -63,6 +66,6 @@ public class RopeBehaviour : MonoBehaviour
 
     public void PullRope()
     {
-       _springJoint.distance -= Time.deltaTime * 4f;
+       _springJoint.distance -= Time.deltaTime * 100f;
     }
 }
