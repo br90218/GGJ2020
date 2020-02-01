@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
 
     public Transform LeftFoot;
     public Transform RightFoot;
+    public Squash Squasher;
 
     protected float LastGroundContactRight;
     protected float LastGroundContactLeft;
@@ -61,7 +62,7 @@ public class PlayerController : MonoBehaviour {
             Velocity.y += JumpSpeed;
             groundContact = false;
             LastJumpTime = Time.time;
-            Debug.Log("Jump");
+            Squasher.PlayStretch();
         }
 
         if (Velocity.y > 0f && !Input.GetKey(KeyCode.Space)) {
@@ -76,6 +77,9 @@ public class PlayerController : MonoBehaviour {
                 float maxDrop = dropRCH.distance - 0.23f;
                 if (Velocity.y < maxDrop && Mathf.Abs(Velocity.y) > Mathf.Abs(maxDrop)) {
                     transform.position += Vector3.down * maxDrop;
+                    if (Mathf.Abs(Velocity.y) > Mathf.Abs(JumpSpeed) / 2f) {
+                        Squasher.PlaySquash();
+                    }
                     Velocity.y = 0f;
                 }
             }
@@ -88,8 +92,8 @@ public class PlayerController : MonoBehaviour {
         float acceleration = Acceleration;
         bool accelerating = true;
         float xDir = Velocity.x == 0f ? 0f : Velocity.x / Mathf.Abs(Velocity.x);
+        var forwardRCH = Physics2D.CircleCast(transform.position, 0.2f, Vector3.right * xDir, 2f);
         if (xDir != rightAxis && xDir != 0f) {
-            Debug.Log("Stop");
             acceleration = Decelleration;
             accelerating = false;
             if (Velocity.x != 0f) {
@@ -106,6 +110,11 @@ public class PlayerController : MonoBehaviour {
         }
         if (Velocity.sqrMagnitude > MaxSpeed * MaxSpeed) {
             Velocity = Velocity.normalized * MaxSpeed;
+        }
+        float maxMove = forwardRCH.distance - 0.1f;
+        if (Mathf.Abs(Velocity.y) > maxMove && forwardRCH.collider != null) {
+            transform.position += Vector3.right * xDir * maxMove;
+            Velocity.x = 0f;
         }
     }
 }
