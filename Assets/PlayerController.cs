@@ -89,8 +89,8 @@ public class PlayerController : MonoBehaviour {
     }
 
     protected void HorizontalMovement() {
-        float rightAxis = Input.GetKey(KeyCode.RightArrow) ? 1f : 0f;
-        rightAxis = Input.GetKey(KeyCode.LeftArrow) ? -1f : rightAxis;
+        float rightAxis = Input.GetKey(KeyCode.D) ? 1f : 0f;
+        rightAxis = Input.GetKey(KeyCode.A) ? -1f : rightAxis;
         float acceleration = Acceleration;
         bool accelerating = true;
         float xDir = Velocity.x == 0f ? 0f : Velocity.x / Mathf.Abs(Velocity.x);
