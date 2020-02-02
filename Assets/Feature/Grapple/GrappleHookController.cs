@@ -39,7 +39,7 @@ public class GrappleHookController : MonoBehaviour
         grappleLaunchTime += Time.deltaTime;
         if (grappleLaunchTotalTime < grappleLaunchTime)
         {
-            Debug.Log("Rope doesn't reach");
+            //Debug.Log("Rope doesn't reach");
             ropeRenderer.ClearRope();
             onGrapple = false;
             return;
@@ -89,7 +89,6 @@ public class GrappleHookController : MonoBehaviour
                 ropeRenderer.ClearRope();
                 ropeRenderer.AddPoint(Vector3.zero);
                 ropeRenderer.AddPoint(Vector3.zero);
-                Debug.Log("Rope Launch!!");
             }
         }
         
