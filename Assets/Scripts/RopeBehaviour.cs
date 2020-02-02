@@ -6,8 +6,8 @@ using UnityEngine;
 public class RopeBehaviour : MonoBehaviour
 {
     public Transform OriginTransform, TargetTransform;
-
-    private LineRenderer _line;
+    public Transform hand;
+    public RopeRenderer _line;
     private SpringJoint2D _springJoint;
     private FixedJoint2D _fixedJoint;
 
@@ -17,6 +17,12 @@ public class RopeBehaviour : MonoBehaviour
         GetComponent<Rigidbody2D>().gravityScale = 0f;
     }
 
+    public void Init(Transform target)
+    {
+        TargetTransform = target;
+        enabled = true;
+    }
+    
     public void Start()
     {
         if (!TargetTransform)
@@ -51,14 +57,17 @@ public class RopeBehaviour : MonoBehaviour
         {
             PullRope();
         }
+        _line.MovePoint(0,hand.position);
+        _line.MovePoint(1,TargetTransform.position);
+        _line.RepaintRope();
     }
 
 
-    private void UpdateLineGraphics()
-    {
-        _line.SetPosition(0, OriginTransform.position);
-        _line.SetPosition(1, TargetTransform.position);
-    }
+//    private void UpdateLineGraphics()
+//    {
+//        _line.SetPosition(0, OriginTransform.position);
+//        _line.SetPosition(1, TargetTransform.position);
+//    }
 
     public void PullRope()
     {

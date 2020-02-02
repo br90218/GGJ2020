@@ -45,7 +45,7 @@ public class GrappleHookController : MonoBehaviour
         grappleLaunchTime += Time.deltaTime;
         if (grappleLaunchTotalTime < grappleLaunchTime)
         {
-            Debug.Log("Rope doesn't reach");
+//            Debug.Log("Rope doesn't reach");
             ropeRenderer.ClearRope();
             onGrapple = false;
             return;
@@ -64,7 +64,7 @@ public class GrappleHookController : MonoBehaviour
 
             if (hit.collider.tag == "StaticHinge")
             {
-                swingStrafeController.StartSwing(hit.collider.transform.parent);
+                swingStrafeController.StartSwing(hit.collider.transform);
                 playerController.enabled = false;
             }
             else
@@ -75,9 +75,8 @@ public class GrappleHookController : MonoBehaviour
                 //            ropeRenderer.ClearRope();
                 //            onGrapple = false;
 
-                ropeBehaviour.TargetTransform = hit.collider.transform;
-
-                ropeBehaviour.enabled = true;
+                ropeBehaviour.Init(hit.collider.transform);
+                
             }
         }
         else if (hit = Physics2D.Raycast(handPos,dir, distance,obstacleLayer))
@@ -110,7 +109,7 @@ public class GrappleHookController : MonoBehaviour
                 ropeRenderer.ClearRope();
                 ropeRenderer.AddPoint(Vector3.zero);
                 ropeRenderer.AddPoint(Vector3.zero);
-                Debug.Log("Rope Launch!!");
+//                Debug.Log("Rope Launch!!");
             }
         }
         

@@ -40,9 +40,13 @@ public class SwingStrafeController : MonoBehaviour
         
         angularSpeed = playerController.Velocity.magnitude / ropeLength;
         angularSpeed *= speedToAngular;
-        if (dis.x > 0)
+        if (playerController.Velocity.x < 0)
         {
             angularSpeed *= -1;
+        }
+        if (dis.x > 0)
+        {
+            //angularSpeed *= -1;
             angle = Mathf.Asin(dis.y/ropeLength);
         }
         else
@@ -118,8 +122,8 @@ public class SwingStrafeController : MonoBehaviour
         var newGPE = (ropeLength - (hingePoint.position.y - hand.position.y)) * g;
         gravitationalPotentialEnergy = newGPE;
         rotationEnergy = energyTotal - newGPE;
-        Debug.Log("Energy"+rotationEnergy);
-        Debug.Log(angularSpeed);
+        //Debug.Log("Energy"+rotationEnergy);
+        //Debug.Log(angularSpeed);
         if (rotationEnergy > 0)
         {
             if (angularSpeed>0)

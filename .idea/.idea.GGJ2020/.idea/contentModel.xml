@@ -23,6 +23,7 @@
           </e>
           <e p="GlobalDataCache.cs" t="Include" />
           <e p="GroundDetector.cs" t="Include" />
+          <e p="HookBehaviour.cs" t="Include" />
           <e p="PlayButton.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerTest.cs" t="Include" />

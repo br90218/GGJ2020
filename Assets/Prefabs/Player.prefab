@@ -48,15 +48,19 @@ PrefabInstance:
       propertyPath: ropeRenderer
       value: 
       objectReference: {fileID: 4208712900905453924}
+    - target: {fileID: 2016110511, guid: e4831fddc55c5427880b9932da96f88d, type: 3}
+      propertyPath: grappleHookController
+      value: 
+      objectReference: {fileID: 2009460984537670979}
     - target: {fileID: 945882571993825194, guid: e4831fddc55c5427880b9932da96f88d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.46060336
+      value: -7.41
       objectReference: {fileID: 0}
     - target: {fileID: 945882571993825194, guid: e4831fddc55c5427880b9932da96f88d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.22
+      value: -3.59
       objectReference: {fileID: 0}
     - target: {fileID: 945882571993825194, guid: e4831fddc55c5427880b9932da96f88d,
         type: 3}
@@ -117,6 +121,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2009460983062627053}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2009460984537670979 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2016110510, guid: e4831fddc55c5427880b9932da96f88d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2009460983062627053}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb4d7a6f5c4ef4c84b59c9d11d15753e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2009460983407905070
 PrefabInstance:
   m_ObjectHideFlags: 0
