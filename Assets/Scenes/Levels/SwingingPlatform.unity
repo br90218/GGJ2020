@@ -339,6 +339,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HookPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 1972223087241593099, guid: f48ac1f32e4134e79ae338ea09211d6b,
+        type: 3}
+      propertyPath: m_TagString
+      value: StaticHinge
+      objectReference: {fileID: 0}
     - target: {fileID: 1972223087241593100, guid: f48ac1f32e4134e79ae338ea09211d6b,
         type: 3}
       propertyPath: m_LocalPosition.x
