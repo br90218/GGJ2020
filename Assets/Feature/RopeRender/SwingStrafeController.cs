@@ -78,8 +78,9 @@ public class SwingStrafeController : MonoBehaviour
             enabled = false;
             grappleHookController.enabled = true;
             playerController.enabled = true;
-            //playerController.Velocity = new Vector3(-angularSpeed * ropeLength * Mathf.Sin(angle),angularSpeed * ropeLength * Mathf.Cos(angle),0) * angularToSpeed;
-            playerController.Velocity = new Vector3();
+            playerController.Velocity = new Vector3(-angularSpeed * ropeLength * Mathf.Sin(angle),angularSpeed * ropeLength * Mathf.Cos(angle),0) * angularToSpeed;
+            //Debug.Log(playerController.Velocity);
+            //playerController.Velocity = new Vector3();
             ropeRenderer.ClearRope();
             return;
         }

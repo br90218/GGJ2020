@@ -1099,7 +1099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2016110511, guid: e4831fddc55c5427880b9932da96f88d, type: 3}
       propertyPath: angularToSpeed
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2016110511, guid: e4831fddc55c5427880b9932da96f88d, type: 3}
       propertyPath: grappleHookController
