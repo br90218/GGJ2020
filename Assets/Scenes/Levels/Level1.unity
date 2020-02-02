@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 325186802}
   - component: {fileID: 325186804}
   - component: {fileID: 325186803}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftBuilding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600,7 +600,7 @@ GameObject:
   - component: {fileID: 1133702203}
   - component: {fileID: 1133702205}
   - component: {fileID: 1133702204}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightBuilding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -867,6 +867,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140413186784436743, guid: 2a1d71020220248948861de3e185b669,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a1d71020220248948861de3e185b669, type: 3}
