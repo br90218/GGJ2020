@@ -294,7 +294,7 @@ PrefabInstance:
     - target: {fileID: 3888592527037121099, guid: 7505a9e69c49b46f4b83b796e10f65cb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.45
+      value: 1.58
       objectReference: {fileID: 0}
     - target: {fileID: 3888592527037121099, guid: 7505a9e69c49b46f4b83b796e10f65cb,
         type: 3}
@@ -344,22 +344,27 @@ PrefabInstance:
     - target: {fileID: 3888592527037121099, guid: 7505a9e69c49b46f4b83b796e10f65cb,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.48000622
+      value: 0.5216926
       objectReference: {fileID: 0}
     - target: {fileID: 3888592527037121099, guid: 7505a9e69c49b46f4b83b796e10f65cb,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.48000622
+      value: 0.5216926
       objectReference: {fileID: 0}
     - target: {fileID: 3888592527037121099, guid: 7505a9e69c49b46f4b83b796e10f65cb,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.48000622
+      value: 0.5216926
       objectReference: {fileID: 0}
     - target: {fileID: 3888592527037121100, guid: 7505a9e69c49b46f4b83b796e10f65cb,
         type: 3}
       propertyPath: m_Name
       value: Winch
+      objectReference: {fileID: 0}
+    - target: {fileID: 3888592527037121110, guid: 7505a9e69c49b46f4b83b796e10f65cb,
+        type: 3}
+      propertyPath: m_Distance
+      value: 7.6781573
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7505a9e69c49b46f4b83b796e10f65cb, type: 3}
@@ -1199,6 +1204,11 @@ PrefabInstance:
     - target: {fileID: 4087812148537580227, guid: 9d1ba95a1af8d4e98a71a72f415c1f36,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5215792313764569091, guid: 9d1ba95a1af8d4e98a71a72f415c1f36,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6051051659378596956, guid: 9d1ba95a1af8d4e98a71a72f415c1f36,
