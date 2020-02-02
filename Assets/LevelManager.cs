@@ -30,7 +30,7 @@ public class LevelManager : GenericPubSubComponent
     // Update is called once per frame
     void Update()
     {
-        if(score >= winScore)
+        if(score >= winScore && score != 0)
         {
             SuccessMessage successMessage = new SuccessMessage();
 

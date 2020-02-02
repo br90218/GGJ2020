@@ -175,6 +175,8 @@ public class SceneManagementComponent : GenericPubSubComponent
             IEnumerator coroutine = FadeAndLoadScene(Level1, string.Empty, 0, false);
             loadSceneCoroutine = StartCoroutine(coroutine);
         }
+
+        LevelManager.instance.winScore = 1;
     }
 
     private void OnSuccess(BaseMessage m)
