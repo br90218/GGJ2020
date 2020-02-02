@@ -25,7 +25,7 @@ public class SFXController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Stop");
+//            Debug.Log("Stop");
             AudioManager.instance.Stop("Walk");
         }
         lastPosition = player.position;

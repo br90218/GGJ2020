@@ -37,6 +37,11 @@ public class GrappleHookController : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        onGrapple = false;
+    }
+
     private void CheckGrappleHit()
     {
         Vector2 handPos = hand.position;
@@ -59,13 +64,15 @@ public class GrappleHookController : MonoBehaviour
             //ropeRenderer.MovePoint(1,hit.collider.transform.parent.position);
             ropeRenderer.MovePoint(1, hit.collider.transform.position);
             ropeRenderer.RepaintRope();
-            enabled = false;
-            onGrapple = false;
+            
+            
             AudioManager.instance.Play("GrappleHit");
             if (hit.collider.tag == "StaticHinge")
             {
                 swingStrafeController.StartSwing(hit.collider.transform);
                 playerController.enabled = false;
+                onGrapple = true;
+                enabled = false;
             }
             else
             {
@@ -74,8 +81,9 @@ public class GrappleHookController : MonoBehaviour
                 //playerController.enabled = false;
                 //            ropeRenderer.ClearRope();
                 //            onGrapple = false;
-
+                ropeRenderer.ClearRope();
                 ropeBehaviour.Init(hit.collider.transform);
+                onGrapple = false;
             }
         }
         else if (hit = Physics2D.Raycast(handPos,dir, distance,obstacleLayer))

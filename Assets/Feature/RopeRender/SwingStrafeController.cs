@@ -153,14 +153,14 @@ public class SwingStrafeController : MonoBehaviour
         
         if (Physics2D.BoxCast(newPosition, boxSize, 0, Vector2.right, travelDistance.magnitude,obstacle))
         {
-            Debug.Log("Wall");
+//            Debug.Log("Wall");
             AudioManager.instance.Play("WallBounce");
             angularSpeed *= -1;
         }
         else if (Physics2D.BoxCast(newPosition, boxSize, 0, Vector2.left, travelDistance.magnitude,obstacle))
         {
             
-            Debug.Log("Wall");
+            //Debug.Log("Wall");
             angularSpeed *= -1;
             
         }
