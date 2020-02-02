@@ -40,14 +40,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3566062853395314793}
     m_Modifications:
-    - target: {fileID: 2016110510, guid: e4831fddc55c5427880b9932da96f88d, type: 3}
-      propertyPath: ropeRenderer
-      value: 
-      objectReference: {fileID: 4208712900905453924}
-    - target: {fileID: 2016110511, guid: e4831fddc55c5427880b9932da96f88d, type: 3}
-      propertyPath: ropeRenderer
-      value: 
-      objectReference: {fileID: 4208712900905453924}
     - target: {fileID: 945882571993825194, guid: e4831fddc55c5427880b9932da96f88d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -108,24 +100,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterWithGrapple
       objectReference: {fileID: 0}
-    - target: {fileID: 945882573297381519, guid: e4831fddc55c5427880b9932da96f88d,
+    - target: {fileID: 5061759150222357140, guid: e4831fddc55c5427880b9932da96f88d,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.4607701
-      objectReference: {fileID: 0}
-    - target: {fileID: 945882573297381519, guid: e4831fddc55c5427880b9932da96f88d,
+      propertyPath: ropeRenderer
+      value: 
+      objectReference: {fileID: 4208712900905453924}
+    - target: {fileID: 5061759150222357141, guid: e4831fddc55c5427880b9932da96f88d,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4.43597
-      objectReference: {fileID: 0}
-    - target: {fileID: 945882573297381519, guid: e4831fddc55c5427880b9932da96f88d,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.823
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5627656841894359088, guid: e4831fddc55c5427880b9932da96f88d, type: 3}
-    - {fileID: 1409685800543193741, guid: e4831fddc55c5427880b9932da96f88d, type: 3}
+      propertyPath: ropeRenderer
+      value: 
+      objectReference: {fileID: 4208712900905453924}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4831fddc55c5427880b9932da96f88d, type: 3}
 --- !u!4 &1640287928231411015 stripped
 Transform:
