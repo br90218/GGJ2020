@@ -17,10 +17,9 @@ public class PlayerController : MonoBehaviour {
     public GroundDetector ground;
 
     public void Update() {
-        transform.position += Velocity / 2f;
         Jump();
         HorizontalMovement();
-        transform.position += Velocity / 2f;
+        transform.position += Velocity;
     }
 
     protected void Jump() {
