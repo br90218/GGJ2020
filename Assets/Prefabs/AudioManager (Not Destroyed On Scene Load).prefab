@@ -116,6 +116,17 @@ MonoBehaviour:
     mixerGroup: {fileID: 243487692776939576, guid: c1b909d686e1946fa8ee9ad0722f61d4,
       type: 2}
     source: {fileID: 0}
+  - name: FireHydrant
+    clip: {fileID: 8300000, guid: 15e09cc362c664796b6a7b0e8151001f, type: 3}
+    volume: 0.75
+    volumeVariance: 0.05
+    pitch: 1
+    pitchVariance: 0.08
+    waitTime: 0
+    loop: 0
+    mixerGroup: {fileID: 243487692776939576, guid: c1b909d686e1946fa8ee9ad0722f61d4,
+      type: 2}
+    source: {fileID: 0}
 --- !u!114 &1866813730
 MonoBehaviour:
   m_ObjectHideFlags: 0
