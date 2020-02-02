@@ -51,12 +51,12 @@ PrefabInstance:
     - target: {fileID: 945882571993825194, guid: e4831fddc55c5427880b9932da96f88d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.46060336
+      value: -5.86
       objectReference: {fileID: 0}
     - target: {fileID: 945882571993825194, guid: e4831fddc55c5427880b9932da96f88d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.22
+      value: -3.67
       objectReference: {fileID: 0}
     - target: {fileID: 945882571993825194, guid: e4831fddc55c5427880b9932da96f88d,
         type: 3}
@@ -108,8 +108,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterWithGrapple
       objectReference: {fileID: 0}
+    - target: {fileID: 945882573297381519, guid: e4831fddc55c5427880b9932da96f88d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.4607701
+      objectReference: {fileID: 0}
+    - target: {fileID: 945882573297381519, guid: e4831fddc55c5427880b9932da96f88d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.43597
+      objectReference: {fileID: 0}
+    - target: {fileID: 945882573297381519, guid: e4831fddc55c5427880b9932da96f88d,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.823
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5627656841894359088, guid: e4831fddc55c5427880b9932da96f88d, type: 3}
+    - {fileID: 1409685800543193741, guid: e4831fddc55c5427880b9932da96f88d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e4831fddc55c5427880b9932da96f88d, type: 3}
 --- !u!4 &1640287928231411015 stripped
 Transform:
