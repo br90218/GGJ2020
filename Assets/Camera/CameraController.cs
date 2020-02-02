@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour
 {
     public CinemachineVirtualCamera[] cams;
     public CameraSwitchZone[] zones;
+    public int startCamNum = 0;
 
     public void SetActiveCam(int i)
     {
@@ -24,7 +25,7 @@ public class CameraController : MonoBehaviour
             zones[i].camNumber = i;
             zones[i].cameraController = this;
         }
-        SetActiveCam(0);
+        SetActiveCam(startCamNum);
     }
     
     
