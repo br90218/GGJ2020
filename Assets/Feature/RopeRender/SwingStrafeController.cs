@@ -23,7 +23,7 @@ public class SwingStrafeController : MonoBehaviour
     
     
     private float angularSpeed;
-    private float angle;
+    public float angle;
     private Transform hingePoint;
 
     private float energyTotal;
