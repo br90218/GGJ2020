@@ -713,12 +713,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9a0fb1870723c248b868c8da5914a82, type: 3}
+--- !u!1 &961337803 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6140413186784436743, guid: 2a1d71020220248948861de3e185b669,
+    type: 3}
+  m_PrefabInstance: {fileID: 2046959710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &961337804 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6140413186784436742, guid: 2a1d71020220248948861de3e185b669,
     type: 3}
   m_PrefabInstance: {fileID: 2046959710}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &961337808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961337803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 308128ab113de4ce989ec31d3e8462ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1025931086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,6 +1038,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1259609155
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 586451209009926527, guid: e699202b8dd484f89b4e3fcf2fbe04bf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586451209009926527, guid: e699202b8dd484f89b4e3fcf2fbe04bf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586451209009926527, guid: e699202b8dd484f89b4e3fcf2fbe04bf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586451209009926527, guid: e699202b8dd484f89b4e3fcf2fbe04bf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586451209009926527, guid: e699202b8dd484f89b4e3fcf2fbe04bf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586451209009926527, guid: e699202b8dd484f89b4e3fcf2fbe04bf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586451209009926527, guid: e699202b8dd484f89b4e3fcf2fbe04bf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 586451209009926527, guid: e699202b8dd484f89b4e3fcf2fbe04bf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 586451209009926527, guid: e699202b8dd484f89b4e3fcf2fbe04bf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586451209009926527, guid: e699202b8dd484f89b4e3fcf2fbe04bf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586451209009926527, guid: e699202b8dd484f89b4e3fcf2fbe04bf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697098019730992402, guid: e699202b8dd484f89b4e3fcf2fbe04bf,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager (Not Destroyed On Scene Load)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e699202b8dd484f89b4e3fcf2fbe04bf, type: 3}
 --- !u!1 &1303601483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,6 +1565,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 7.3196774
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140413186784436744, guid: 2a1d71020220248948861de3e185b669,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6140413186784436745, guid: 2a1d71020220248948861de3e185b669,
         type: 3}
