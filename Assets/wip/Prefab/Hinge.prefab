@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2323707283516196704}
   - component: {fileID: 681770210310598477}
-  - component: {fileID: 6299426811558710612}
+  - component: {fileID: 7543918055105471371}
   m_Layer: 9
   m_Name: Hinge
-  m_TagString: Untagged
+  m_TagString: StaticHinge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,19 +80,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!135 &6299426811558710612
-SphereCollider:
+--- !u!58 &7543918055105471371
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4578400146864115329}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -4.656613e-10, y: 0.000000029802322}
   serializedVersion: 2
   m_Radius: 0.16000004
-  m_Center: {x: -4.656613e-10, y: 0.000000029802322, z: 0}
 --- !u!1 &8278599349134178437
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +107,7 @@ GameObject:
   - component: {fileID: 8278599349134178490}
   m_Layer: 9
   m_Name: Hinge
-  m_TagString: Untagged
+  m_TagString: StaticHinge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
