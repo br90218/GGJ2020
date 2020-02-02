@@ -41,11 +41,14 @@ public class LevelManager : GenericPubSubComponent
     {
         if(score >= winScore && score != 0)
         {
+            Debug.Log("Level Complete");
+
             SuccessMessage successMessage = new SuccessMessage();
 
             successMessage.nextLevel = nextLevel;
             successMessage.nextLevelWinScore = nextLevelWinScore;
 
+            Debug.Log("Publishing Success Message");
             PubSubServerInstance.Publish(successMessage);
 
             score = 0;

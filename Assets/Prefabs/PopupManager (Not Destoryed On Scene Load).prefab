@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SuccessText: {fileID: 3069425885078936749}
-  FailureText: {fileID: 0}
+  FailureText: {fileID: 961244361649382884}
 --- !u!1 &3069425885078936749
 GameObject:
   m_ObjectHideFlags: 0

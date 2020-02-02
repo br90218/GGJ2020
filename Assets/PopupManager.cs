@@ -35,6 +35,8 @@ public class PopupManager : GenericPubSubComponent
 
     void OnSuccess(BaseMessage m)
     {
+        Debug.Log("PopupManager: OnSuccess called");
+
         SuccessText.SetActive(true);
     }
 

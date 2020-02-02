@@ -12,5 +12,8 @@ public class LevelInitialize : MonoBehaviour
     {
         LevelManager.Instance.nextLevel = nextLevel;
         LevelManager.Instance.nextLevelWinScore = nextLevelWinScore;
+
+        PopupManager.instance.SuccessText.SetActive(false);
+        PopupManager.instance.FailureText.SetActive(false);
     }
 }

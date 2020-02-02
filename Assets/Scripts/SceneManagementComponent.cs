@@ -188,8 +188,6 @@ public class SceneManagementComponent : GenericPubSubComponent
             IEnumerator coroutine = FadeAndLoadScene(successMessage.nextLevel, string.Empty, 2, false);
             loadSceneCoroutine = StartCoroutine(coroutine);
         }
-
-        PopupManager.instance.SuccessText.SetActive(false);
     }
 
     private void OnFailure(BaseMessage m)
@@ -199,8 +197,6 @@ public class SceneManagementComponent : GenericPubSubComponent
             IEnumerator coroutine = FadeAndLoadScene(SceneManager.GetActiveScene().name, string.Empty, 2, false);
             loadSceneCoroutine = StartCoroutine(coroutine);
         }
-
-        PopupManager.instance.FailureText.SetActive(false);
     }
 
     #endregion
