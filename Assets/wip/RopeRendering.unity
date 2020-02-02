@@ -746,6 +746,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b44e1b2a0f6458bb6ea9465db6fa65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  lineThickness: 0.11
+  uvWorldSpaceScale: 2.23
+  tensionScale: 1
+--- !u!114 &2016110506 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 945882571993825197, guid: e4831fddc55c5427880b9932da96f88d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5061759149162952740}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dd9d8176a6e4453906c560eda111a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2016110510 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2016110510, guid: e4831fddc55c5427880b9932da96f88d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5061759149162952740}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb4d7a6f5c4ef4c84b59c9d11d15753e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2016110511 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2016110511, guid: e4831fddc55c5427880b9932da96f88d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5061759149162952740}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0201597084c1b46d98f6e561f438c06c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &352814584605584229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1031,19 +1073,43 @@ PrefabInstance:
       propertyPath: ropeRenderer
       value: 
       objectReference: {fileID: 1687132027}
+    - target: {fileID: 2016110510, guid: e4831fddc55c5427880b9932da96f88d, type: 3}
+      propertyPath: swingStrafeController
+      value: 
+      objectReference: {fileID: 2016110511}
+    - target: {fileID: 2016110510, guid: e4831fddc55c5427880b9932da96f88d, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 2016110506}
     - target: {fileID: 2016110511, guid: e4831fddc55c5427880b9932da96f88d, type: 3}
       propertyPath: ropeRenderer
       value: 
       objectReference: {fileID: 1687132027}
+    - target: {fileID: 2016110511, guid: e4831fddc55c5427880b9932da96f88d, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 2016110506}
+    - target: {fileID: 2016110511, guid: e4831fddc55c5427880b9932da96f88d, type: 3}
+      propertyPath: speedToAngular
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016110511, guid: e4831fddc55c5427880b9932da96f88d, type: 3}
+      propertyPath: angularToSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016110511, guid: e4831fddc55c5427880b9932da96f88d, type: 3}
+      propertyPath: grappleHookController
+      value: 
+      objectReference: {fileID: 2016110510}
     - target: {fileID: 945882571993825194, guid: e4831fddc55c5427880b9932da96f88d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.88
       objectReference: {fileID: 0}
     - target: {fileID: 945882571993825194, guid: e4831fddc55c5427880b9932da96f88d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 3.53
       objectReference: {fileID: 0}
     - target: {fileID: 945882571993825194, guid: e4831fddc55c5427880b9932da96f88d,
         type: 3}

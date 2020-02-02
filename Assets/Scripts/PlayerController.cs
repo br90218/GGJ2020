@@ -8,21 +8,13 @@ public class PlayerController : MonoBehaviour {
     public float Decelleration = 1f;
     public float JumpSpeed = 1f;
     public float JumpDeceleration = 1f;
-    public Transform Body;
-    public float JumpGraceTime = 0.02f;
     public float Gravity;
     public float AirSteerRatio = 0.5f;
     public ParticleSystem dustParticle;
 
-    public Transform LeftFoot;
-    public Transform RightFoot;
     public Squash Squasher;
-
-    protected float LastGroundContactRight;
-    protected float LastGroundContactLeft;
-    protected float LastJumpTime;
     public Vector3 Velocity;
-    protected bool groundContact;
+    public GroundDetector ground;
 
     public void Update() {
         transform.position += Velocity / 2f;
@@ -31,48 +23,13 @@ public class PlayerController : MonoBehaviour {
         transform.position += Velocity / 2f;
     }
 
-
-
-    //public void FixedUpdate()
-    //{
-    //    GetComponent<Rigidbody2D>().position += new Vector2(Velocity.x, Velocity.y) / 2f;
-    //    Jump();
-    //    HorizontalMovement();
-    //    GetComponent<Rigidbody2D>().position += new Vector2(Velocity.x, Velocity.y) / 2f;
-    //}
-
     protected void Jump() {
-        var leftRCH = Physics2D.Raycast(LeftFoot.position, Vector3.down, 0.15f);
-        var rightRCH = Physics2D.Raycast(RightFoot.position, Vector3.down, 0.15f);
         var dropRCH = Physics2D.CircleCast(transform.position, 0.25f, Vector3.down, 20f);
 
-        bool leftDangle = leftRCH.collider == null;
-        bool rightDangle = rightRCH.collider == null;
-
-        if (!leftDangle) {
-            LastGroundContactLeft = Time.time;
-        }
-        if (!rightDangle) {
-            LastGroundContactRight = Time.time;
-        }
-        
-        var thresholdTime = Time.time - JumpGraceTime;
-        groundContact = (LastGroundContactLeft > thresholdTime || LastGroundContactRight > thresholdTime) && LastJumpTime < thresholdTime;
-
-        if (leftDangle && !rightDangle) {
-            Body.transform.rotation = Quaternion.Euler(0f, 0f, 20f);
-        }
-        else if (!leftDangle && rightDangle) {
-            Body.transform.rotation = Quaternion.Euler(0f, 0f, -20f);
-        }
-        else {
-            Body.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && groundContact) {
+        if (Input.GetKeyDown(KeyCode.Space) && ground.GroundContact) {
             Velocity.y += JumpSpeed;
-            groundContact = false;
-            LastJumpTime = Time.time;
+            ground.GroundContact = false;
+            ground.LastJumpTime = Time.time;
             Squasher.PlayStretch();
         }
 
@@ -80,11 +37,10 @@ public class PlayerController : MonoBehaviour {
             Velocity.y -= JumpDeceleration * Time.deltaTime;
         }
 
-        if (leftDangle && rightDangle) {
+        if (dropRCH.collider == null || dropRCH.distance > 0.23f) {
             Velocity.y -= Gravity * Time.deltaTime;
         }
-        else {
-            if (Velocity.y < 0f) {
+        if (Velocity.y < 0f) {
                 float maxDrop = dropRCH.distance - 0.23f;
                 if (Velocity.y < maxDrop && Mathf.Abs(Velocity.y) > Mathf.Abs(maxDrop)) {
                     transform.position += Vector3.down * maxDrop;
@@ -95,7 +51,6 @@ public class PlayerController : MonoBehaviour {
                     Velocity.y = 0f;
                 }
             }
-        }
     }
 
     protected void HorizontalMovement() {
@@ -112,7 +67,7 @@ public class PlayerController : MonoBehaviour {
                 rightAxis = -xDir;
             }
         }
-        if (!groundContact) {
+        if (!ground.GroundContact) {
             acceleration *= AirSteerRatio;
         }
         var change = Vector3.right * rightAxis * Time.deltaTime * acceleration;

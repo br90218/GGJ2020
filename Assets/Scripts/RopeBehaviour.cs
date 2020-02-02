@@ -47,11 +47,7 @@ public class RopeBehaviour : MonoBehaviour
     public void Update()
     {
         //UpdateLineGraphics();
-    }
-
-    public void FixedUpdate()
-    {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.E))
         {
             PullRope();
         }
@@ -66,6 +62,6 @@ public class RopeBehaviour : MonoBehaviour
 
     public void PullRope()
     {
-       _springJoint.distance -= Time.deltaTime * 100f;
+       _springJoint.distance -= Time.deltaTime * 1f;
     }
 }
