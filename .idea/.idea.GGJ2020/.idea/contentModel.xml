@@ -70,6 +70,9 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="wip" t="Include">
+          <e p="WallDetector.cs" t="Include" />
+        </e>
       </e>
       <e p="GGJ2020.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

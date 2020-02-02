@@ -76,7 +76,6 @@ public class GrappleHookController : MonoBehaviour
                 //            onGrapple = false;
 
                 ropeBehaviour.Init(hit.collider.transform);
-                
             }
         }
         else if (hit = Physics2D.Raycast(handPos,dir, distance,obstacleLayer))
