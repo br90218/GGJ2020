@@ -11,6 +11,7 @@
           <e p="CameraController.cs" t="Include" />
           <e p="CameraSwitchZone.cs" t="Include" />
         </e>
+        <e p="DeathZone.cs" t="Include" />
         <e p="Feature" t="Include">
           <e p="Grapple" t="Include">
             <e p="GrappleHookController.cs" t="Include" />
