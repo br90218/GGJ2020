@@ -51,6 +51,7 @@ public class SceneManagementComponent : GenericPubSubComponent
 
         PubSubServerInstance.Subscribe(typeof(StartGameMessage), OnStartGame);
         PubSubServerInstance.Subscribe(typeof(SuccessMessage), OnSuccess);
+        PubSubServerInstance.Subscribe(typeof(FailureMessage), OnFailure);
 
         Debug.Log("IN AWAKE OF SCENE MANAGER");
     }
@@ -59,6 +60,7 @@ public class SceneManagementComponent : GenericPubSubComponent
     {
         PubSubServerInstance.Unsubscribe(typeof(StartGameMessage), OnStartGame);
         PubSubServerInstance.Unsubscribe(typeof(SuccessMessage), OnSuccess);
+        PubSubServerInstance.Unsubscribe(typeof(FailureMessage), OnFailure);
     }
 
     #endregion

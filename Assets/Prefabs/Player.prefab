@@ -154,6 +154,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 945882571993825197, guid: e4831fddc55c5427880b9932da96f88d,
+        type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 945882571993825199, guid: e4831fddc55c5427880b9932da96f88d,
         type: 3}
       propertyPath: m_Name
@@ -179,6 +184,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.09133541
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163395742733369684, guid: e4831fddc55c5427880b9932da96f88d,
+        type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5627656841894359088, guid: e4831fddc55c5427880b9932da96f88d, type: 3}

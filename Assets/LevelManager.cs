@@ -54,6 +54,16 @@ public class LevelManager : GenericPubSubComponent
             score = 0;
             winScore = nextLevelWinScore;
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Level Failed");
+
+            FailureMessage failureMessage = new FailureMessage();
+
+            Debug.Log("Publishing Failure Message");
+            PubSubServerInstance.Publish(failureMessage);
+        }
     }
 
     public void AddPoint()
