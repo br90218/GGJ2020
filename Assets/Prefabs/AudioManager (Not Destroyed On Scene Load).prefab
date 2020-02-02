@@ -49,7 +49,51 @@ MonoBehaviour:
     type: 2}
   sfxChannel: {fileID: 243487692776939576, guid: c1b909d686e1946fa8ee9ad0722f61d4,
     type: 2}
-  sounds: []
+  sounds:
+  - name: LandOn
+    clip: {fileID: 8300000, guid: 1be6fc74623a54a1ba0f17437be83960, type: 3}
+    volume: 0.75
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    waitTime: 0
+    loop: 0
+    mixerGroup: {fileID: 243487692776939576, guid: c1b909d686e1946fa8ee9ad0722f61d4,
+      type: 2}
+    source: {fileID: 0}
+  - name: GrappleHit
+    clip: {fileID: 8300000, guid: 9fb653b8f89ea4d7c8419391c40a61c8, type: 3}
+    volume: 0.75
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    waitTime: 0
+    loop: 0
+    mixerGroup: {fileID: 243487692776939576, guid: c1b909d686e1946fa8ee9ad0722f61d4,
+      type: 2}
+    source: {fileID: 0}
+  - name: GrappleLaunch
+    clip: {fileID: 8300000, guid: 95157462893594b6687455181dca43e8, type: 3}
+    volume: 0.75
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.5
+    waitTime: 0
+    loop: 0
+    mixerGroup: {fileID: 243487692776939576, guid: c1b909d686e1946fa8ee9ad0722f61d4,
+      type: 2}
+    source: {fileID: 0}
+  - name: Swing
+    clip: {fileID: 8300000, guid: b9dc37170bf6f4eae82d59ceaf950828, type: 3}
+    volume: 0.75
+    volumeVariance: 0.05
+    pitch: 1
+    pitchVariance: 0.3
+    waitTime: 0
+    loop: 0
+    mixerGroup: {fileID: 243487692776939576, guid: c1b909d686e1946fa8ee9ad0722f61d4,
+      type: 2}
+    source: {fileID: 0}
 --- !u!114 &1866813730
 MonoBehaviour:
   m_ObjectHideFlags: 0

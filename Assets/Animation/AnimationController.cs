@@ -12,6 +12,7 @@ public class AnimationController : MonoBehaviour
     
 
     private Vector3 lastPosition;
+    
 
     private void LateUpdate()
     {
@@ -35,5 +36,7 @@ public class AnimationController : MonoBehaviour
         }
 
         lastPosition = player.position;
+        
+        
     }
 }

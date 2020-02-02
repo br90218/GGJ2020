@@ -7,6 +7,10 @@
         <e p="Animation" t="Include">
           <e p="AnimationController.cs" t="Include" />
         </e>
+        <e p="Camera" t="Include">
+          <e p="CameraController.cs" t="Include" />
+          <e p="CameraSwitchZone.cs" t="Include" />
+        </e>
         <e p="Feature" t="Include">
           <e p="Grapple" t="Include">
             <e p="GrappleHookController.cs" t="Include" />
@@ -30,6 +34,7 @@
         <e p="Scripts" t="Include">
           <e p="Audio" t="Include">
             <e p="AudioManager.cs" t="Include" />
+            <e p="SFXController.cs" t="Include" />
             <e p="Sound.cs" t="Include" />
             <e p="UISounds.cs" t="Include" />
           </e>
