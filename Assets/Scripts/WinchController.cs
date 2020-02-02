@@ -7,6 +7,7 @@ public class WinchController : MonoBehaviour
     public SpringJoint2D spring;
     public float interactionSqrDistance;
     public float towSpeed = 1f;
+    public Animator animator;
     private bool towing;
     void Update()
     {
@@ -19,12 +20,14 @@ public class WinchController : MonoBehaviour
                 spring.connectedBody = playerSpring.connectedBody;
                 playerSpring.connectedBody = null;
                 towing = true;
+                animator.SetBool("cranking", true);
             }
         }
         if (towing) {
             if (Input.GetKeyUp(KeyCode.E)) {
                 spring.connectedBody = null;
                 towing = false;
+                animator.SetBool("cranking", false);
                 return;
             }
             spring.distance -= towSpeed * Time.deltaTime;
