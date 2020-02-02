@@ -76,6 +76,20 @@ SpringJoint2D:
   m_Distance: 3.069657
   m_DampingRatio: 1
   m_Frequency: 1
+--- !u!114 &1915896365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945882571993825199}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74e3c31feeba1f4a87a292584ed1fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OriginTransform: {fileID: 945882571993825194}
+  TargetTransform: {fileID: 0}
 --- !u!114 &2016110510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,23 +154,12 @@ MonoBehaviour:
   speedToAngular: 1
   angularToSpeed: 0.8
   swingAcceleration: 1
+  maxAngularSpeed: 4.4
+  angularDrag: 0.5
   ropeRenderer: {fileID: 0}
   hand: {fileID: 2377636849450323397}
+  grappleHookController: {fileID: 0}
   playerController: {fileID: 945882571993825197}
---- !u!114 &1915896365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945882571993825199}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d74e3c31feeba1f4a87a292584ed1fca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OriginTransform: {fileID: 945882571993825194}
-  TargetTransform: {fileID: 0}
 --- !u!1001 &5061759148480091450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -182,17 +185,17 @@ PrefabInstance:
     - target: {fileID: 5412913406616398480, guid: 8c698c1f0e4b644f39f3a0366732f87b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5412913406616398480, guid: 8c698c1f0e4b644f39f3a0366732f87b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5412913406616398480, guid: 8c698c1f0e4b644f39f3a0366732f87b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5412913406616398480, guid: 8c698c1f0e4b644f39f3a0366732f87b,
         type: 3}
@@ -243,6 +246,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BodyType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5412913407117935777, guid: 8c698c1f0e4b644f39f3a0366732f87b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 5412913408075809251, guid: 8c698c1f0e4b644f39f3a0366732f87b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.43
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c698c1f0e4b644f39f3a0366732f87b, type: 3}
