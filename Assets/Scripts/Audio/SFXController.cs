@@ -18,12 +18,17 @@ public class SFXController : MonoBehaviour
         var speed = (lastPosition - player.position) / Time.deltaTime;
         if (speed.x> walkThreshold || speed.x < -walkThreshold)
         {
-            AudioManager.instance.Play("walk");
+            if (!AudioManager.instance.isPlaying("Walk"))
+            {
+                AudioManager.instance.Play("Walk");
+            }
         }
         else
         {
-            AudioManager.instance.Stop("walk");
+            Debug.Log("Stop");
+            AudioManager.instance.Stop("Walk");
         }
+        lastPosition = player.position;
 
         if (groundDetector.GroundContact != grounded && groundDetector.GroundContact)
         {
@@ -38,8 +43,8 @@ public class SFXController : MonoBehaviour
             {
                 angle += Mathf.Deg2Rad * 360;
             }
-            Debug.Log((Mathf.Deg2Rad * 360));
-            Debug.Log(angle);
+//            Debug.Log((Mathf.Deg2Rad * 360));
+//            Debug.Log(angle);
             if (InHighPoint)
             {
                 if (angle > 4.4 && angle < 5)
