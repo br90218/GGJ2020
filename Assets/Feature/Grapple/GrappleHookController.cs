@@ -54,7 +54,7 @@ public class GrappleHookController : MonoBehaviour
             ropeRenderer.RepaintRope();
             enabled = false;
             onGrapple = false;
-            swingStrafeController.StartSwing(hit.collider.transform.parent.position);
+            swingStrafeController.StartSwing(hit.collider.transform.parent);
             playerController.enabled = false;
 //            ropeRenderer.ClearRope();
 //            onGrapple = false;
