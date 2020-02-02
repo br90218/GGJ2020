@@ -61,7 +61,7 @@ public class GrappleHookController : MonoBehaviour
             ropeRenderer.RepaintRope();
             enabled = false;
             onGrapple = false;
-
+            AudioManager.instance.Play("GrappleHit");
             if (hit.collider.tag == "StaticHinge")
             {
                 swingStrafeController.StartSwing(hit.collider.transform);
@@ -109,6 +109,7 @@ public class GrappleHookController : MonoBehaviour
                 ropeRenderer.ClearRope();
                 ropeRenderer.AddPoint(Vector3.zero);
                 ropeRenderer.AddPoint(Vector3.zero);
+                AudioManager.instance.Play("GrappleLaunch");
 //                Debug.Log("Rope Launch!!");
             }
         }

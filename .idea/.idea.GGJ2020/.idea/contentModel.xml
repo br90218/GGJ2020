@@ -34,6 +34,7 @@
         <e p="Scripts" t="Include">
           <e p="Audio" t="Include">
             <e p="AudioManager.cs" t="Include" />
+            <e p="SFXController.cs" t="Include" />
             <e p="Sound.cs" t="Include" />
             <e p="UISounds.cs" t="Include" />
           </e>
