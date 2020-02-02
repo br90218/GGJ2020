@@ -48,6 +48,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: Level4
   nextLevelWinScore: 1
+--- !u!114 &120187478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640287929008648813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a9872d71532b494084b716c3ae318e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1640287929008648802}
+  walkThreshold: 0.4
+  groundDetector: {fileID: 6650439013852742585}
+  swingStrafeController: {fileID: 2009460984537670978}
+  InHighPoint: 1
 --- !u!114 &1382087826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,21 +81,6 @@ MonoBehaviour:
   animator: {fileID: 1640287929008648800}
   playerSpriteRenderer: {fileID: 1640287929008648803}
   walkThreshold: 0.4
---- !u!114 &120187478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640287929008648813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a9872d71532b494084b716c3ae318e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1640287929008648802}
-  walkThreshold: 0.4
-  groundDetector: {fileID: 6650439013852742585}
 --- !u!1001 &2009460983062627053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -236,6 +238,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb4d7a6f5c4ef4c84b59c9d11d15753e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2009460984537670978 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2016110511, guid: e4831fddc55c5427880b9932da96f88d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2009460983062627053}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0201597084c1b46d98f6e561f438c06c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1640287929008648813 stripped

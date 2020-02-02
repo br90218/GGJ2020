@@ -86,9 +86,9 @@ MonoBehaviour:
   - name: Swing
     clip: {fileID: 8300000, guid: b9dc37170bf6f4eae82d59ceaf950828, type: 3}
     volume: 0.75
-    volumeVariance: 0
+    volumeVariance: 0.05
     pitch: 1
-    pitchVariance: 0
+    pitchVariance: 0.3
     waitTime: 0
     loop: 0
     mixerGroup: {fileID: 243487692776939576, guid: c1b909d686e1946fa8ee9ad0722f61d4,
