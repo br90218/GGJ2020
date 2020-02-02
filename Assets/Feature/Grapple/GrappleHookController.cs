@@ -83,6 +83,7 @@ public class GrappleHookController : MonoBehaviour
         {
             //Hit a obstacle
             ropeRenderer.ClearRope();
+            onGrapple = false;
         } 
         //Nothing is hit yet
         else
