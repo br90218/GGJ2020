@@ -4769,11 +4769,6 @@ GameObject:
   - component: {fileID: 5412913406616398486}
   - component: {fileID: 5412913406616398487}
   - component: {fileID: 114536344098591854}
-  - component: {fileID: 1915896366}
-  - component: {fileID: 1915896367}
-  - component: {fileID: 1915896365}
-  - component: {fileID: 2016110510}
-  - component: {fileID: 2016110511}
   m_Layer: 2
   m_Name: Character
   m_TagString: Untagged
@@ -4790,7 +4785,7 @@ Transform:
   m_GameObject: {fileID: 5412913406616398485}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1.288, y: 1.288, z: 1.288}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5412913407988999605}
   - {fileID: 5412913408075809251}
@@ -4824,7 +4819,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5412913406616398485}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -4880,128 +4875,6 @@ MonoBehaviour:
   LastJumpTime: 0
   JumpGraceTime: 0.02
   Body: {fileID: 5412913407988999605}
---- !u!255 &1915896366
-FixedJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5412913406616398485}
-  m_Enabled: 0
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.1642468, y: -2.8403034}
-  m_DampingRatio: 0
-  m_Frequency: 0
---- !u!231 &1915896367
-SpringJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5412913406616398485}
-  m_Enabled: 0
-  serializedVersion: 4
-  m_EnableCollision: 1
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 1
-  m_Distance: 3.069657
-  m_DampingRatio: 1
-  m_Frequency: 1
---- !u!114 &1915896365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5412913406616398485}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d74e3c31feeba1f4a87a292584ed1fca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OriginTransform: {fileID: 5412913406616398480}
-  TargetTransform: {fileID: 0}
---- !u!114 &2016110510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5412913406616398485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb4d7a6f5c4ef4c84b59c9d11d15753e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hand: {fileID: 7404457916173965567}
-  backGroundLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  hingeLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 1024
-  grappleLaunchCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
-      value: 6
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  swingStrafeController: {fileID: 2016110511}
-  playerController: {fileID: 5412913406616398487}
-  ropeRenderer: {fileID: 0}
---- !u!114 &2016110511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5412913406616398485}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0201597084c1b46d98f6e561f438c06c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedToAngular: 1
-  angularToSpeed: 0.8
-  swingAcceleration: 1
-  maxAngularSpeed: 4.4
-  angularDrag: 0.5
-  ropeRenderer: {fileID: 0}
-  hand: {fileID: 7404457916173965567}
-  grappleHookController: {fileID: 0}
-  playerController: {fileID: 5412913406616398487}
 --- !u!1 &5412913407117935782
 GameObject:
   m_ObjectHideFlags: 0
