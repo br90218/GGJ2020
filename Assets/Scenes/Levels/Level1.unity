@@ -541,7 +541,7 @@ PrefabInstance:
     - target: {fileID: 5441365934709058343, guid: d9a0fb1870723c248b868c8da5914a82,
         type: 3}
       propertyPath: m_Name
-      value: FireHydrant_new
+      value: FireHydrant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9a0fb1870723c248b868c8da5914a82, type: 3}
@@ -717,6 +717,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638251645305492127, guid: eab34051532d34233a782a09fb1e84e4,
+        type: 3}
+      propertyPath: nextLevel
+      value: Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638251645305492127, guid: eab34051532d34233a782a09fb1e84e4,
+        type: 3}
+      propertyPath: nextLevelWinScore
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3566062853395314793, guid: eab34051532d34233a782a09fb1e84e4,
         type: 3}

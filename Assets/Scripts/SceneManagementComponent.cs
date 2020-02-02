@@ -50,6 +50,7 @@ public class SceneManagementComponent : GenericPubSubComponent
         }
 
         PubSubServerInstance.Subscribe(typeof(StartGameMessage), OnStartGame);
+        PubSubServerInstance.Subscribe(typeof(SuccessMessage), OnSuccess);
 
         Debug.Log("IN AWAKE OF SCENE MANAGER");
     }
@@ -57,6 +58,7 @@ public class SceneManagementComponent : GenericPubSubComponent
     private void OnDestroy()
     {
         PubSubServerInstance.Unsubscribe(typeof(StartGameMessage), OnStartGame);
+        PubSubServerInstance.Unsubscribe(typeof(SuccessMessage), OnSuccess);
     }
 
     #endregion
@@ -101,7 +103,7 @@ public class SceneManagementComponent : GenericPubSubComponent
     /// This allows the function to leave the overlay up until later call to fade it out.
     /// </param>
     /// <returns></returns>
-    public IEnumerator FadeAndLoadScene(string sceneToLoad, string infoText = "", bool holdOverlay = false, Sprite sprite = null)
+    public IEnumerator FadeAndLoadScene(string sceneToLoad, string infoText = "", int waitTime = 0, bool holdOverlay = false, Sprite sprite = null)
     {
         if (holdOverlay)
         {
@@ -111,6 +113,8 @@ public class SceneManagementComponent : GenericPubSubComponent
         {
             FadeOutUIImage.color = Color.black;
         }
+
+        yield return new WaitForSeconds(waitTime);
 
         // Fade in stuff
         // Wait until all faded in
@@ -168,9 +172,35 @@ public class SceneManagementComponent : GenericPubSubComponent
     {
         if (loadSceneCoroutine == null)
         {
-            IEnumerator coroutine = FadeAndLoadScene(Level1, string.Empty, false);
+            IEnumerator coroutine = FadeAndLoadScene(Level1, string.Empty, 0, false);
             loadSceneCoroutine = StartCoroutine(coroutine);
         }
+
+        LevelManager.instance.winScore = 1;
+    }
+
+    private void OnSuccess(BaseMessage m)
+    {
+        SuccessMessage successMessage = m as SuccessMessage;
+
+        if (loadSceneCoroutine == null)
+        {
+            IEnumerator coroutine = FadeAndLoadScene(successMessage.nextLevel, string.Empty, 2, false);
+            loadSceneCoroutine = StartCoroutine(coroutine);
+        }
+
+        PopupManager.instance.SuccessText.SetActive(false);
+    }
+
+    private void OnFailure(BaseMessage m)
+    {
+        if (loadSceneCoroutine == null)
+        {
+            IEnumerator coroutine = FadeAndLoadScene(SceneManager.GetActiveScene().name, string.Empty, 2, false);
+            loadSceneCoroutine = StartCoroutine(coroutine);
+        }
+
+        PopupManager.instance.FailureText.SetActive(false);
     }
 
     #endregion
