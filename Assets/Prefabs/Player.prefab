@@ -143,7 +143,7 @@ PrefabInstance:
     - target: {fileID: 5706396264015806786, guid: 0aacddcc04a11a94db4ad6d84b0c4036,
         type: 3}
       propertyPath: m_Name
-      value: Background
+      value: RaycastBackground
       objectReference: {fileID: 0}
     - target: {fileID: 5706396264015806813, guid: 0aacddcc04a11a94db4ad6d84b0c4036,
         type: 3}
