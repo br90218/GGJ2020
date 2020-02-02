@@ -756,7 +756,7 @@ Transform:
   m_LocalScale: {x: 1.325, y: 1.325, z: 1.325}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &641794039 stripped
 Transform:
@@ -901,7 +901,7 @@ Transform:
   - {fileID: 325186801}
   - {fileID: 1133702202}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1133702201
 GameObject:
@@ -1536,41 +1536,6 @@ PrefabInstance:
         type: 3}
       propertyPath: nextLevelWinScore
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1640287928231411015, guid: eab34051532d34233a782a09fb1e84e4,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 1640287928231411015, guid: eab34051532d34233a782a09fb1e84e4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 1640287929008648802, guid: eab34051532d34233a782a09fb1e84e4,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1640287929008648802, guid: eab34051532d34233a782a09fb1e84e4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1640287929008648802, guid: eab34051532d34233a782a09fb1e84e4,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.4607701
-      objectReference: {fileID: 0}
-    - target: {fileID: 1640287929008648802, guid: eab34051532d34233a782a09fb1e84e4,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4.43597
-      objectReference: {fileID: 0}
-    - target: {fileID: 1640287929008648802, guid: eab34051532d34233a782a09fb1e84e4,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.823
       objectReference: {fileID: 0}
     - target: {fileID: 3566062853395314793, guid: eab34051532d34233a782a09fb1e84e4,
         type: 3}
