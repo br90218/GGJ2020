@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
     public Squash Squasher;
     public Vector3 Velocity;
     public GroundDetector ground;
+    public LayerMask groundLayer;
 
     public void Update() {
         Jump();
@@ -23,7 +24,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     protected void Jump() {
-        var dropRCH = Physics2D.CircleCast(transform.position, 0.25f, Vector3.down, 20f);
+        var dropRCH = Physics2D.CircleCast(transform.position, 0.25f, Vector3.down, 20f,groundLayer);
 
         if (Input.GetKeyDown(KeyCode.Space) && ground.GroundContact) {
             Velocity.y += JumpSpeed;
@@ -58,7 +59,7 @@ public class PlayerController : MonoBehaviour {
         float acceleration = Acceleration;
         bool accelerating = true;
         float xDir = Velocity.x == 0f ? 0f : Velocity.x / Mathf.Abs(Velocity.x);
-        var forwardRCH = Physics2D.CircleCast(transform.position, 0.2f, Vector3.right * xDir, 2f);
+        var forwardRCH = Physics2D.CircleCast(transform.position, 0.2f, Vector3.right * xDir, 2f,groundLayer);
         if (xDir != rightAxis && xDir != 0f) {
             acceleration = Decelleration;
             accelerating = false;
