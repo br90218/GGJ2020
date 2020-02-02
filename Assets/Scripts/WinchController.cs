@@ -25,10 +25,20 @@ public class WinchController : MonoBehaviour
         }
         if (towing) {
             if (Input.GetKeyUp(KeyCode.E)) {
+
                 spring.connectedBody = null;
                 towing = false;
                 animator.SetBool("cranking", false);
+                AudioManager.instance.Stop("FireHydrant");
                 return;
+            }
+            else
+            {
+                if (!AudioManager.instance.isPlaying("FireHydrant"))
+                {
+                    AudioManager.instance.Play("FireHydrant");
+                }
+                
             }
             spring.distance -= towSpeed * Time.deltaTime;
         }
