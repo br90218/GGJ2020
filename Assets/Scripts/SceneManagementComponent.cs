@@ -176,7 +176,7 @@ public class SceneManagementComponent : GenericPubSubComponent
             loadSceneCoroutine = StartCoroutine(coroutine);
         }
 
-        LevelManager.instance.winScore = 1;
+        LevelManager.Instance.winScore = 1;
     }
 
     private void OnSuccess(BaseMessage m)

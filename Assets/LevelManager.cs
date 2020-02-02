@@ -6,7 +6,16 @@ using PubSubMessages;
 
 public class LevelManager : GenericPubSubComponent
 {
-    public static LevelManager instance;
+    protected static LevelManager instance;
+    public static LevelManager Instance {
+        get {
+            if (instance == null) {
+                var singleton = new GameObject("Level Manager", typeof(LevelManager));
+                instance = singleton.GetComponent<LevelManager>();
+            }
+            return instance;
+        }
+    }
 
     public int score = 0;
     public int winScore = 0;

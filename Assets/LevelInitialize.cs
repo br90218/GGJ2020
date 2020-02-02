@@ -10,7 +10,7 @@ public class LevelInitialize : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LevelManager.instance.nextLevel = nextLevel;
-        LevelManager.instance.nextLevelWinScore = nextLevelWinScore;
+        LevelManager.Instance.nextLevel = nextLevel;
+        LevelManager.Instance.nextLevelWinScore = nextLevelWinScore;
     }
 }
