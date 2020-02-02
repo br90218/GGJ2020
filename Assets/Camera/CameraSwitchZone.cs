@@ -10,13 +10,13 @@ public class CameraSwitchZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(camNumber);
+//        Debug.Log(camNumber);
         cameraController.SetActiveCam(camNumber);
     }
     
-    private void OnTriggerStay(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log(camNumber);
+        //Debug.Log(camNumber);
         cameraController.SetActiveCam(camNumber);
     }
     

@@ -20,7 +20,10 @@ public class RopeBehaviour : MonoBehaviour
     public void Init(Transform target)
     {
         TargetTransform = target;
+        _line.AddPoint(hand.position);
+        _line.AddPoint(target.position);
         enabled = true;
+
     }
     
     public void Start()
