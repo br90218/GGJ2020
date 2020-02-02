@@ -291,8 +291,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4162113521842259398}
+  - component: {fileID: 114289051598880962}
   m_Layer: 0
-  m_Name: FireHydrant_new
+  m_Name: FireHydrant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -314,6 +315,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114289051598880962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5441365934709058343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405b8b6e7adaf49a79899bbc2c26094d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  top: {fileID: 1381837319941371222}
+  errorRange: 2
 --- !u!1001 &609107221154705903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -404,12 +419,12 @@ PrefabInstance:
     - target: {fileID: 1972223087241593102, guid: f48ac1f32e4134e79ae338ea09211d6b,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -1.5899706
+      value: -1.58997
       objectReference: {fileID: 0}
     - target: {fileID: 1972223087241593102, guid: f48ac1f32e4134e79ae338ea09211d6b,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -0.570048
+      value: -0.5700474
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f48ac1f32e4134e79ae338ea09211d6b, type: 3}
