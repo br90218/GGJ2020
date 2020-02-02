@@ -1584,6 +1584,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1638251645305492127, guid: eab34051532d34233a782a09fb1e84e4,
+        type: 3}
+      propertyPath: nextLevel
+      value: Level4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638251645305492127, guid: eab34051532d34233a782a09fb1e84e4,
+        type: 3}
+      propertyPath: nextLevelWinScore
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3566062853395314793, guid: eab34051532d34233a782a09fb1e84e4,
         type: 3}
       propertyPath: m_LocalPosition.x
