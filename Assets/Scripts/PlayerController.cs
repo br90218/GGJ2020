@@ -37,20 +37,21 @@ public class PlayerController : MonoBehaviour {
             Velocity.y -= JumpDeceleration * Time.deltaTime;
         }
 
-        if (dropRCH.collider == null || dropRCH.distance > 0.23f) {
+        Debug.Log(dropRCH.distance);
+        if (dropRCH.collider == null || dropRCH.distance > 0.43f) {
             Velocity.y -= Gravity * Time.deltaTime;
         }
-        if (Velocity.y < 0f) {
-                float maxDrop = dropRCH.distance - 0.23f;
-                if (Velocity.y < maxDrop && Mathf.Abs(Velocity.y) > Mathf.Abs(maxDrop)) {
-                    transform.position += Vector3.down * maxDrop;
-                    if (Mathf.Abs(Velocity.y) > Mathf.Abs(JumpSpeed) / 2f) {
-                        Squasher.PlaySquash();
-                        dustParticle.Play();
-                    }
-                    Velocity.y = 0f;
+        else if (Velocity.y < 0f) {
+            float maxDrop = dropRCH.distance - 0.43f;
+            if (Velocity.y < -maxDrop) {
+                transform.position += Vector3.down * maxDrop;
+                if (Mathf.Abs(Velocity.y) > Mathf.Abs(JumpSpeed) / 2f) {
+                    Squasher.PlaySquash();
+                    dustParticle.Play();
                 }
+                Velocity.y = 0f;
             }
+        }
     }
 
     protected void HorizontalMovement() {
