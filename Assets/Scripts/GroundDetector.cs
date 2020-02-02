@@ -9,6 +9,7 @@ public class GroundDetector : MonoBehaviour
     public bool GroundContact;
     public bool LeftDangle;
     public bool RightDangle;
+    public LayerMask groundLayer;
 
     protected float LastGroundContactRight;
     protected float LastGroundContactLeft;
@@ -17,8 +18,8 @@ public class GroundDetector : MonoBehaviour
     public Transform Body;
 
     public void Update() {
-        var leftRCH = Physics2D.Raycast(LeftFoot.position, Vector3.down, 0.15f);
-        var rightRCH = Physics2D.Raycast(RightFoot.position, Vector3.down, 0.15f);
+        var leftRCH = Physics2D.Raycast(LeftFoot.position, Vector3.down, 0.15f,groundLayer);
+        var rightRCH = Physics2D.Raycast(RightFoot.position, Vector3.down, 0.15f,groundLayer);
 
         LeftDangle = leftRCH.collider == null;
         RightDangle = rightRCH.collider == null;
