@@ -37,7 +37,6 @@ public class PlayerController : MonoBehaviour {
             Velocity.y -= JumpDeceleration * Time.deltaTime;
         }
 
-        Debug.Log(dropRCH.distance);
         if (dropRCH.collider == null || dropRCH.distance > 0.43f) {
             Velocity.y -= Gravity * Time.deltaTime;
         }
