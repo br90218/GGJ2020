@@ -4768,6 +4768,7 @@ GameObject:
   - component: {fileID: 5412913406616398481}
   - component: {fileID: 5412913406616398486}
   - component: {fileID: 5412913406616398487}
+  - component: {fileID: 114536344098591854}
   m_Layer: 2
   m_Name: Character
   m_TagString: Untagged
@@ -4848,14 +4849,32 @@ MonoBehaviour:
   Decelleration: 2
   JumpSpeed: 0.13
   JumpDeceleration: 3
-  Body: {fileID: 5412913407988999605}
-  JumpGraceTime: 0.02
   Gravity: 0.5
   AirSteerRatio: 0.5
   dustParticle: {fileID: 199493577}
+  Squasher: {fileID: 5412913407988999606}
+  Velocity: {x: 0, y: 0, z: 0}
+  ground: {fileID: 114536344098591854}
+--- !u!114 &114536344098591854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5412913406616398485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78170317af3e24cbe993971966040023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   LeftFoot: {fileID: 5412913408075809251}
   RightFoot: {fileID: 5412913407117935777}
-  Squasher: {fileID: 5412913407988999606}
+  GroundContact: 0
+  LeftDangle: 0
+  RightDangle: 0
+  LastJumpTime: 0
+  JumpGraceTime: 0.02
+  Body: {fileID: 5412913407988999605}
 --- !u!1 &5412913407117935782
 GameObject:
   m_ObjectHideFlags: 0
