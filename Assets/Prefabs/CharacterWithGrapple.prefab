@@ -138,7 +138,7 @@ MonoBehaviour:
   swingAcceleration: 1
   maxAngularSpeed: 4.4
   angularDrag: 0.5
-  ropeRetractSpeed: 1
+  ropeRetractSpeed: 5
   obstacle:
     serializedVersion: 2
     m_Bits: 1024
@@ -183,6 +183,22 @@ MonoBehaviour:
   animator: {fileID: 945882573297381517}
   playerSpriteRenderer: {fileID: 945882573297381518}
   walkThreshold: 0.4
+--- !u!114 &6322161865226725594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945882573297381504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67f9549b2bc0f46afa48a3c7a36e1f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 945882573297381519}
+  animator: {fileID: 945882573297381517}
+  playerSpriteRenderer: {fileID: 945882573297381518}
+  walkThreshold: 0.4
 --- !u!114 &7342797478597549763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,22 +216,6 @@ MonoBehaviour:
   groundDetector: {fileID: 5163395742733369684}
   swingStrafeController: {fileID: 2016110511}
   InHighPoint: 1
---- !u!114 &6322161865226725594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945882573297381504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67f9549b2bc0f46afa48a3c7a36e1f2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 945882573297381519}
-  animator: {fileID: 945882573297381517}
-  playerSpriteRenderer: {fileID: 945882573297381518}
-  walkThreshold: 0.4
 --- !u!1001 &5061759148480091450
 PrefabInstance:
   m_ObjectHideFlags: 0
