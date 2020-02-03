@@ -49,6 +49,7 @@ public class LevelManager : GenericPubSubComponent
             successMessage.nextLevelWinScore = nextLevelWinScore;
 
             Debug.Log("Publishing Success Message");
+            AudioManager.instance.Play("Win");
             PubSubServerInstance.Publish(successMessage);
 
             score = 0;
@@ -58,7 +59,7 @@ public class LevelManager : GenericPubSubComponent
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("Level Failed");
-
+            AudioManager.instance.Play("Fail");
             FailureMessage failureMessage = new FailureMessage();
 
             Debug.Log("Publishing Failure Message");
