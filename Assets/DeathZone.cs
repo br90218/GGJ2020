@@ -14,6 +14,8 @@ public class DeathZone : MonoBehaviour
 
         Debug.Log("Publishing Failure Message");
         PubSubServer.Instance.Publish(failureMessage);
+
+        AudioManager.instance.Play("Fail");
     }
 
     private void OnTriggerEnter2D(Collider2D other)

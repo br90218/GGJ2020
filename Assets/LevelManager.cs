@@ -59,11 +59,12 @@ public class LevelManager : GenericPubSubComponent
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("Level Failed");
-            AudioManager.instance.Play("Fail");
             FailureMessage failureMessage = new FailureMessage();
 
             Debug.Log("Publishing Failure Message");
             PubSubServerInstance.Publish(failureMessage);
+
+            AudioManager.instance.Play("Fail");
         }
     }
 
