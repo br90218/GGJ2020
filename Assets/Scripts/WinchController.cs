@@ -25,7 +25,9 @@ public class WinchController : MonoBehaviour
         }
         if (towing) {
             if (Input.GetKeyUp(KeyCode.E)) {
-
+                var controller = GameObject.FindObjectOfType<PlayerController>();
+                var playerSpring = controller.GetComponent<SpringJoint2D>();
+                playerSpring.connectedBody = spring.connectedBody;
                 spring.connectedBody = null;
                 towing = false;
                 animator.SetBool("cranking", false);
