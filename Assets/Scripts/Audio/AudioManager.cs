@@ -39,6 +39,8 @@ public class AudioManager : MonoBehaviour
 
 			s.source.outputAudioMixerGroup = s.mixerGroup;
 		}
+
+        AudioManager.instance.Play("BGM");
 	}
 
 	public void Play(string sound)

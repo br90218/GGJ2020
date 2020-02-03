@@ -2151,6 +2151,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1638251645305492127, guid: eab34051532d34233a782a09fb1e84e4,
+        type: 3}
+      propertyPath: nextLevel
+      value: WinScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638251645305492127, guid: eab34051532d34233a782a09fb1e84e4,
+        type: 3}
+      propertyPath: nextLevelWinScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2009460984537670978, guid: eab34051532d34233a782a09fb1e84e4,
         type: 3}
       propertyPath: ropeRetractSpeed
