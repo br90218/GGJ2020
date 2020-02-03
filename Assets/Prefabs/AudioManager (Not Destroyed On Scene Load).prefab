@@ -157,18 +157,7 @@ MonoBehaviour:
     pitchVariance: 0.08
     waitTime: 0
     loop: 0
-    mixerGroup: {fileID: 243487692776939576, guid: c1b909d686e1946fa8ee9ad0722f61d4,
-      type: 2}
-    source: {fileID: 0}
-  - name: Victory
-    clip: {fileID: 8300000, guid: be6ed9aeb3ea64161b8c605f364a0af6, type: 3}
-    volume: 0.75
-    volumeVariance: 0.05
-    pitch: 1
-    pitchVariance: 0.08
-    waitTime: 0
-    loop: 0
-    mixerGroup: {fileID: 243487692776939576, guid: c1b909d686e1946fa8ee9ad0722f61d4,
+    mixerGroup: {fileID: 243919979377098982, guid: c1b909d686e1946fa8ee9ad0722f61d4,
       type: 2}
     source: {fileID: 0}
 --- !u!114 &1866813730
